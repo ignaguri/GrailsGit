@@ -15,6 +15,16 @@
 </head>
 <body>
 
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/logout">
+                <asset:image src="grails.svg" alt="Grails Logo"/>
+            </a>
+        </div>
+    </div>
+</div>
+
 %{--    <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
