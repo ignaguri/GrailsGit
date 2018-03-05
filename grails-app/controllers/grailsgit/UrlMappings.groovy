@@ -8,8 +8,7 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-
-        "/"(view:"/index")
+        "/"(action: "login", controller: 'grailGit')
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
