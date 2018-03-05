@@ -9,10 +9,21 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title></title>
+    <title>Categorías</title>
 </head>
 
 <body>
-
+<div class="row">
+    <div class="page-header">
+        <h1>Categorías</h1>
+    </div>
+    <div class="col-md-12">
+        <ul>
+            <g:each var="c" in="${categories}">
+                <li><a href="/grailGit/category/${c.id}">${c.name}</a</li>
+            </g:each>
+        </ul>
+    </div>
+</div>
 </body>
 </html>

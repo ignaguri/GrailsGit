@@ -9,10 +9,22 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title></title>
+    <title>Categoría</title>
 </head>
 
 <body>
-
+<div class="row">
+    <div class="page-header">
+        <h1>Categoría</h1>
+    </div>
+    <div class="col-md-12">
+        <ul>
+            <li>Nombre: ${category.name}</li>
+            <li>Site: ${category.site}</li>
+            <li>Image: <a href="${category.urlImage}">${category.urlImage}</a></li>
+            <li>Visits: ${category.visits}</li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
