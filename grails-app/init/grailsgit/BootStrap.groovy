@@ -23,6 +23,12 @@ class BootStrap {
         uruguay.idSite = "MLU"
         uruguay.active = false
         uruguay.save()
+
+        Site chile = new Site()
+        chile.name = "Chile"
+        chile.idSite = "MLC"
+        chile.active = true
+        chile.save()
     }
     def destroy = {
     }
