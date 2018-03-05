@@ -3,6 +3,9 @@ package grailsgit
 class BootStrap {
 
     def init = { servletContext ->
+
+        new User(user: "admin", password: "admin", name: "Adminio", lastName: "Adminosito").save()
+
         Site argentina = new Site()
         argentina.name = "Argentina"
         argentina.idSite = "MLA"
