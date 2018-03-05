@@ -7,6 +7,9 @@ class Category {
     String urlImage
     int visits
     static constraints = {
-        visits min: 0
+        name nullable: false, blank: false
+        site nullable: false, blank: false
+        urlImage nullable: true, blank: true
+        visits nullable: true, blank: true
     }
 }
