@@ -2,6 +2,7 @@ package grailsgit
 
 class GrailGitController {
 
+    SiteService siteService
     boolean logged = false;
     User currentUser;
 
@@ -53,21 +54,29 @@ class GrailGitController {
            }
     }
 
-    def logout() {
-
-        logged = false;
-        redirect (action:"login")
-    }
-
     def sites() {
 
         if (!logged){
             redirect(action:"login")
         }
 
+        try {
+            render(view: "sites", model: [sitesToReturn: siteService.list()])
+        } catch (Exception ex) {
+            ex.printStackTrace()
+            flash.error = 'No se pudo realizar su solicitud.'
+            redirect action: 'sites'
+        }
+    }
+    def logout() {
+
+        logged = false;
+        redirect (action:"login")
     }
 
-    def categories(id){}
+
+
+    def categories(id) {}
 
     def category(id) {}
 }
