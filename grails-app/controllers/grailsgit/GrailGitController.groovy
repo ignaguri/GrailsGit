@@ -76,7 +76,21 @@ class GrailGitController {
 
 
 
-    def categories(id) {}
+    def categories(id) {
 
-    def category(id) {}
+        if (!logged){
+            redirect(action:"login")
+        }
+
+
+    }
+
+    def category(id) {
+
+        if (!logged){
+            redirect(action:"login")
+        }
+
+
+    }
 }
